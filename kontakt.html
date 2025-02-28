@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - NaturGuiden</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kontakt.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/kontakt.js" defer></script>
+    <meta name="description" content="Kontakta oss på NaturGuiden med dina frågor om vandringsleder, utrustning eller för att bli medlem i vårt friluftscommunity.">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="images/naturguiden-logo.png" alt="NaturGuiden Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <button class="hamburger-menu" aria-label="Öppna menyn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Hem</a></li>
+                <li class="nav-item"><a href="vandringsleder.html">Vandringsleder</a></li>
+                <li class="nav-item"><a href="utrustning.html">Utrustning</a></li>
+                <li class="nav-item"><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Kontakta NaturGuiden</h1>
+                <p>Har du frågor, feedback eller vill bidra till communityn? Vi hörs gärna från dig!</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-container">
+                <div class="contact-method">
+                    <div class="icon-container">
+                        <img src="images/icon-email.png" alt="E-post ikon">
+                    </div>
+                    <h3>E-post</h3>
+                    <p>Skicka dina frågor till:</p>
+                    <a href="mailto:info@naturguiden.se">info@naturguiden.se</a>
+                    <p class="response-time">Svarstid: 1-2 arbetsdagar</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="icon-container">
+                        <img src="images/icon-phone.png" alt="Telefon ikon">
+                    </div>
+                    <h3>Telefon</h3>
+                    <p>Ring oss vardagar 10-16:</p>
+                    <a href="tel:+4686001234">08-600 12 34</a>
+                    <p class="response-time">Lunchstängt 12-13</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="icon-container">
+                        <img src="images/icon-location.png" alt="Plats ikon">
+                    </div>
+                    <h3>Besök oss</h3>
+                    <p>Naturvägen 25, 114 51 Stockholm</p>
+                    <p class="response-time">Öppettider: Tis-Fre 12-17, Lör 10-15</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Skicka ett meddelande</h2>
+                <p>Fyll i formuläret nedan så återkommer vi så snart som möjligt.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Namn*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-post*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Ämne*</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Välj ett ämne</option>
+                            <option value="trails">Vandringsleder</option>
+                            <option value="equipment">Utrustning</option>
+                            <option value="membership">Medlemskap</option>
+                            <option value="collaboration">Samarbete</option>
+                            <option value="other">Övrigt</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Meddelande*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Jag vill prenumerera på nyhetsbrevet</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Jag godkänner <a href="privacy.html">integritetspolicyn</a> och behandling av mina personuppgifter*</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Skicka meddelande</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Vanliga frågor</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Hur blir jag medlem i NaturGuiden?</h3>
+                    <div class="faq-answer">
+                        <p>Du kan registrera dig som medlem via vår medlemssida. Medlemskap kostar 250 kr per år och ger dig tillgång till exklusiva guider, rabatter hos våra partnerbutiker och möjlighet att delta i våra organiserade turer.</p>
+                        <a href="medlemskap.html" class="btn-secondary">Bli medlem</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Kan jag bidra med information om vandringsleder?</h3>
+                    <div class="faq-answer">
+                        <p>Ja, vi välkomnar bidrag från våra användare! Om du har information, bilder eller tips om vandringsleder kan du skicka in detta via vårt kontaktformulär eller maila direkt till leder@naturguiden.se. Alla bidrag granskas av vårt team innan publicering.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Anordnar ni guidade turer?</h3>
+                    <div class="faq-answer">
+                        <p>Ja, vi anordnar regelbundet guidade turer för våra medlemmar. Dessa varierar från enkla dagsturer till mer utmanande flerdagarsäventyr. Aktuella turer annonseras i vårt nyhetsbrev och på vår eventkalender.</p>
+                        <a href="events.html" class="btn-secondary">Se kommande turer</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Hur kan jag få personliga rekommendationer för vandringsleder?</h3>
+                    <div class="faq-answer">
+                        <p>Som medlem kan du boka en personlig konsultation med en av våra friluftsvägledare. Vi kan hjälpa dig hitta den perfekta vandringen baserat på dina önskemål, erfarenhetsnivå och tillgänglig tid. Kontakta oss via formuläret ovan för att boka tid.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Hitta till oss</h2>
+            <div class="map-container">
+                <!-- Här skulle en riktig karta infogas med JavaScript, t.ex. Google Maps eller OpenStreetMap -->
+                <div class="placeholder-map">
+                    <img src="images/office-map.jpg" alt="Karta till vårt kontor">
+                </div>
+                <div class="map-info">
+                    <h3>NaturGuiden Huvudkontor</h3>
+                    <p>Naturvägen 25<br>114 51 Stockholm</p>
+                    <p><strong>Kollektivtrafik:</strong> T-bana Karlaplan (grön linje), buss 4 eller 72 till Naturhistoriska</p>
+                    <p><strong>Parkering:</strong> Avgiftsbelagd gatuparkering finns i området, samt parkeringshus på Valhallavägen 50.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NaturGuiden</h4>
+                <p>Din guide till Sveriges vackra natur och friluftsupplevelser.</p>
+                <p>&copy; 2025 NaturGuiden</p>
+            </div>
+            <div class="footer-section">
+                <h4>Snabblänkar</h4>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="vandringsleder.html">Vandringsleder</a></li>
+                    <li><a href="utrustning.html">Utrustning</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Följ oss</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
