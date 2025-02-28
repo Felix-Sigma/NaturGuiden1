@@ -1,0 +1,52 @@
+/* Globala ändringar */
+body {
+    font-family: 'Roboto', sans-serif;  /* Byt ut Arial mot en modernare font */
+    line-height: 1.8;
+    background-color: #fafafa;  /* Ljusare bakgrund för en fräsch känsla */
+    color: #333;
+  }
+  
+  /* Header med gradientbakgrund och ändrade paddings */
+  .main-header {
+    background: linear-gradient(90deg, #00695c, #00897b);
+    padding: 15px 30px;
+  }
+  
+  /* Modifierade navigationslänkar med hover-effekt */
+  .nav-list a {
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+  }
+  
+  .nav-list a:hover,
+  .nav-list a.active {
+    background-color: #004d40;
+    transform: scale(1.05);
+  }
+  
+  /* Förbättrad FAQ: animation vid visning/döljning */
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+  
+  .faq-answer.active {
+    max-height: 200px;  /* Justera efter innehållets längd */
+  }
+  
+  /* Responsiv navigering med bakgrund vid toggling */
+  @media (max-width: 768px) {
+    .nav-list.active {
+      display: flex;
+      flex-direction: column;
+      background-color: #004d40;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      padding: 20px;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+/* Kontaktformulär med fokus-effekter */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  border: 2px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #00796b;
+}
+
+/* Uppdaterade knappar med mjuk övergång och liten rörelse vid hover */
+.contact-form button.btn-primary {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button.btn-primary:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+/* FAQ-sektionen med uppdaterad stil för frågor */
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #ccc;
+}
