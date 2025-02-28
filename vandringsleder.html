@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vandringsleder - NaturGuiden</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vandringsleder.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/vandringsleder.js" defer></script>
+    <meta name="description" content="Upptäck Sveriges bästa vandringsleder, från fjäll till kust, med detaljerade guider och säsongstips.">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="images/naturguiden-logo.png" alt="NaturGuiden Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <button class="hamburger-menu" aria-label="Öppna menyn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Hem</a></li>
+                <li class="nav-item"><a href="vandringsleder.html" class="active">Vandringsleder</a></li>
+                <li class="nav-item"><a href="utrustning.html">Utrustning</a></li>
+                <li class="nav-item"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trail-hero">
+            <div class="trail-hero-content">
+                <h1>Vandringsleder i Sverige</h1>
+                <p>Utforska vårt lands mest spektakulära vandringsleder, från lättare dagsturer till utmanande flerdagarsäventyr</p>
+            </div>
+        </section>
+
+        <section class="trail-filters">
+            <h2>Hitta din perfekta vandringsled</h2>
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="region">Region</label>
+                    <select id="region">
+                        <option value="all">Alla regioner</option>
+                        <option value="north">Norra Sverige</option>
+                        <option value="central">Mellersta Sverige</option>
+                        <option value="south">Södra Sverige</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="difficulty">Svårighetsgrad</label>
+                    <select id="difficulty">
+                        <option value="all">Alla nivåer</option>
+                        <option value="easy">Lätt</option>
+                        <option value="medium">Medel</option>
+                        <option value="hard">Svår</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="length">Längd</label>
+                    <select id="length">
+                        <option value="all">Alla längder</option>
+                        <option value="short">Kort (< 5 km)</option>
+                        <option value="medium">Medel (5-15 km)</option>
+                        <option value="long">Lång (> 15 km)</option>
+                    </select>
+                </div>
+                <button class="btn-primary filter-button">Filtrera</button>
+            </div>
+        </section>
+
+        <section class="trails-list">
+            <div class="trail-category">
+                <h2>Fjällvandringar</h2>
+                <div class="trails-grid">
+                    <article class="trail-card" id="kungsleden">
+                        <img src="images/kungsleden-large.jpg" alt="Kungsleden i norra Sverige">
+                        <div class="trail-details">
+                            <h3>Kungsleden</h3>
+                            <div class="trail-info">
+                                <span class="difficulty hard">Svår</span>
+                                <span class="length">440 km</span>
+                                <span class="region">Norra Sverige</span>
+                            </div>
+                            <p>Kungsleden (King's Trail) sträcker sig 440 km genom några av Sveriges mest spektakulära fjällandskap från Abisko i norr till Hemavan i söder. Leden passerar genom fyra nationalparker och naturreservatet Vindelfjällen.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-cabin.png" alt="Stugikon">
+                                    <span>Stugor längs leden</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>Juni-September</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-altitude.png" alt="Höjdikon">
+                                    <span>2000 m höjdskillnad</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="kungsleden">Visa karta</button>
+                        </div>
+                    </article>
+
+                    <article class="trail-card">
+                        <img src="images/jamtlandstriangeln.jpg" alt="Jämtlandstriangeln">
+                        <div class="trail-details">
+                            <h3>Jämtlandstriangeln</h3>
+                            <div class="trail-info">
+                                <span class="difficulty medium">Medel</span>
+                                <span class="length">47 km</span>
+                                <span class="region">Norra Sverige</span>
+                            </div>
+                            <p>Jämtlandstriangeln är en populär tredagarsled mellan fjällstationerna Storulvån, Blåhammaren och Sylarna. Perfekt för nybörjare på fjällvandring med bekväma övernattningar i fjällstationer.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-cabin.png" alt="Stugikon">
+                                    <span>Fjällstationer</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>Juni-September</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-altitude.png" alt="Höjdikon">
+                                    <span>700 m höjdskillnad</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="jamtlandstriangeln">Visa karta</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="trail-category">
+                <h2>Kustnära leder</h2>
+                <div class="trails-grid">
+                    <article class="trail-card" id="hoga-kusten">
+                        <img src="images/hoga-kusten-large.jpg" alt="Höga Kusten leden">
+                        <div class="trail-details">
+                            <h3>Höga Kusten leden</h3>
+                            <div class="trail-info">
+                                <span class="difficulty medium">Medel</span>
+                                <span class="length">130 km</span>
+                                <span class="region">Norra Sverige</span>
+                            </div>
+                            <p>Höga Kustenleden går genom ett unikt världsarvsområde med dramatiska kustlandskap, högsta kustlinjen och fantastiska utsiktspunkter. Perfekt för den som söker varierad terräng med både skog och havsutsikt.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-tent.png" alt="Tältplats">
+                                    <span>Tältplatser</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>Maj-Oktober</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-altitude.png" alt="Höjdikon">
+                                    <span>300 m höjdskillnad</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="hoga-kusten">Visa karta</button>
+                        </div>
+                    </article>
+
+                    <article class="trail-card">
+                        <img src="images/skaneleden.jpg" alt="Skåneleden">
+                        <div class="trail-details">
+                            <h3>Skåneleden</h3>
+                            <div class="trail-info">
+                                <span class="difficulty easy">Lätt</span>
+                                <span class="length">1300 km</span>
+                                <span class="region">Södra Sverige</span>
+                            </div>
+                            <p>Skåneleden är uppdelad i flera delleder som tar dig genom Skånes varierande landskap, från sandstränder och klippkust till böljande åkrar och djupa skogar. Perfekt för kortare etapper och nybörjare.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-tent.png" alt="Tältplats">
+                                    <span>Tältplatser</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>Året runt</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-altitude.png" alt="Höjdikon">
+                                    <span>200 m höjdskillnad</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="skaneleden">Visa karta</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="trail-category">
+                <h2>Skogsleder</h2>
+                <div class="trails-grid">
+                    <article class="trail-card" id="sormlandsleden">
+                        <img src="images/sormlandsleden-large.jpg" alt="Sörmlandsleden">
+                        <div class="trail-details">
+                            <h3>Sörmlandsleden</h3>
+                            <div class="trail-info">
+                                <span class="difficulty easy">Lätt-Medel</span>
+                                <span class="length">1000 km</span>
+                                <span class="region">Mellersta Sverige</span>
+                            </div>
+                            <p>Sörmlandsleden är Sveriges längsta markerade vandringsled med över 100 etapper. Leden går genom vackra skogar, förbi sjöar och kulturlandskap. Perfekt för dagsturer nära Stockholm.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-tent.png" alt="Tältplats">
+                                    <span>Vindskydd</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>April-November</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-accessibility.png" alt="Tillgänglighetsikon">
+                                    <span>Kollektivtrafik</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="sormlandsleden">Visa karta</button>
+                        </div>
+                    </article>
+
+                    <article class="trail-card">
+                        <img src="images/bergslagsleden.jpg" alt="Bergslagsleden">
+                        <div class="trail-details">
+                            <h3>Bergslagsleden</h3>
+                            <div class="trail-info">
+                                <span class="difficulty medium">Medel</span>
+                                <span class="length">280 km</span>
+                                <span class="region">Mellersta Sverige</span>
+                            </div>
+                            <p>Bergslagsleden går genom vackra skogar, historiska bruksmiljöer och naturreservat i Bergslagen. Leden är indelad i 17 etapper med vindskydd och övernattningsmöjligheter.</p>
+                            <div class="trail-features">
+                                <div class="feature">
+                                    <img src="images/icon-tent.png" alt="Tältplats">
+                                    <span>Vindskydd</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-season.png" alt="Säsongsikon">
+                                    <span>Maj-Oktober</span>
+                                </div>
+                                <div class="feature">
+                                    <img src="images/icon-cultural.png" alt="Kulturikon">
+                                    <span>Kulturhistoriska platser</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary show-trail-map" data-trail="bergslagsleden">Visa karta</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="map-modal">
+            <div class="map-container">
+                <button class="close-map-btn">&times;</button>
+                <h3 class="map-title">Ledkarta</h3>
+                <div class="trail-map">
+                    <!-- Map will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NaturGuiden</h4>
+                <p>Din guide till Sveriges vackra natur och friluftsupplevelser.</p>
+                <p>&copy; 2025 NaturGuiden</p>
+            </div>
+            <div class="footer-section">
+                <h4>Snabblänkar</h4>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="vandringsleder.html">Vandringsleder</a></li>
+                    <li><a href="utrustning.html">Utrustning</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Följ oss</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
