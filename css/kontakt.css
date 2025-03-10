@@ -1,46 +1,357 @@
-/* Kontaktformulär med fokus-effekter */
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  border: 2px solid #ccc;
-  transition: border 0.3s ease;
-}
+/* Specifika stilar för kontaktsidan */
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #00796b;
-}
-
-/* Uppdaterade knappar med mjuk övergång och liten rörelse vid hover */
-.contact-form button.btn-primary {
-  background-color: #00796b;
+/* Kontakt hero */
+.contact-hero {
+  height: 40vh;
+  min-height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/contact-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.contact-hero-content {
+  max-width: 800px;
+}
+
+.contact-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Kontaktinformation */
+.contact-info {
+  background-color: #f2f8f4;
+  padding: 4rem 5%;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-method {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-method .icon-container {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background-color: #e6f2ec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-method img {
+  max-width: 35px;
+}
+
+.contact-method h3 {
+  color: #2e6e41;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-method p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-method a {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.response-time {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Kontaktformulär */
+.contact-form-section {
+  padding: 4rem 5%;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  color: #2e6e41;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-container > p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-group:nth-last-child(3),
+.form-group:nth-last-child(2),
+.form-group:last-child,
+.form-group:nth-child(5) {
+  grid-column: span 2;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
-  font-size: 1em;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.contact-form button.btn-primary:hover {
-  background-color: #004d40;
-  transform: translateY(-2px);
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2e6e41;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 110, 65, 0.1);
 }
 
-/* FAQ-sektionen med uppdaterad stil för frågor */
-.faq-question {
-  font-weight: bold;
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-top: 0.3rem;
+}
+
+.checkbox-group label {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.contact-form .btn-primary {
+  grid-column: span 2;
+  justify-self: center;
+  margin-top: 1rem;
+  min-width: 200px;
   cursor: pointer;
-  margin-bottom: 5px;
-  padding: 5px;
-  background-color: #e0e0e0;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
 }
 
-.faq-question:hover {
-  background-color: #ccc;
+/* FAQ-sektion */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 4rem 5%;
+}
+
+.faq-container {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2e6e41;
+  background-color: #f8fafb;
+  border-left: 4px solid #2e6e41;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.faq-question:after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e6e41;
+}
+
+.faq-item.active .faq-question:after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 1.5rem;
+  max-height: 500px;
+}
+
+.faq-answer p {
+  margin-bottom: 1rem;
+}
+
+.faq-answer .btn-secondary {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Kartsektion */
+.map-section {
+  padding: 4rem 5%;
+}
+
+.map-container {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-map {
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.placeholder-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-info {
+  padding: 2rem;
+}
+
+.map-info h3 {
+  color: #2e6e41;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.map-info p {
+  margin-bottom: 1rem;
+}
+
+/* Responsiv design för kontaktsidan */
+@media screen and (max-width: 900px) {
+  .map-container {
+      grid-template-columns: 1fr;
+  }
+  
+  .placeholder-map {
+      min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-hero h1 {
+      font-size: 2.2rem;
+  }
+  
+  .contact-form {
+      grid-template-columns: 1fr;
+  }
+  
+  .form-group:nth-last-child(3),
+  .form-group:nth-last-child(2),
+  .form-group:last-child,
+  .form-group:nth-child(5) {
+      grid-column: span 1;
+  }
+  
+  .contact-form .btn-primary {
+      grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-hero {
+      min-height: 250px;
+  }
+  
+  .contact-hero h1 {
+      font-size: 1.8rem;
+  }
+  
+  .contact-method {
+      padding: 1.5rem;
+  }
+  
+  .form-container {
+      padding: 1.5rem;
+  }
+}
+
+/* JavaScript-stödjande klasser */
+.faq-item.active .faq-question {
+  background-color: #e6f2ec;
 }

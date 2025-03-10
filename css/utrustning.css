@@ -1,253 +1,370 @@
-/* utrustning.css med förbättrade stilar */
+/* Specifika stilar för utrustningssidan */
 
-/* CSS-variabler för konsekventa färger och övergångar */
-:root {
-    --primary-color: #004d40;
-    --secondary-color: #00796b;
-    --light-bg: #f7f7f7;
-    --text-color: #333;
-    --heading-color: #004d40;
-    --transition-speed: 0.3s;
-  }
-  
-  /* Hero-sektion för utrustningssidan */
-  .equipment-hero {
-    background: url('../images/equipment-hero.jpg') no-repeat center center/cover;
-    padding: 60px 20px;
-    color: #fff;
-    text-align: center;
-  }
-  
+/* Utrustning hero */
+.equipment-hero {
+  height: 40vh;
+  min-height: 300px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/equipment-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.equipment-hero-content {
+  max-width: 800px;
+}
+
+.equipment-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.equipment-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Utrustning introduktion */
+.equipment-intro {
+  padding: 4rem 5%;
+  background-color: #f2f8f4;
+}
+
+.intro-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  color: #2e6e41;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.intro-content h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #2e6e41;
+  margin: 0.8rem auto 0;
+}
+
+.intro-content > p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+}
+
+.equipment-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.principle {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.principle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.principle-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background-color: #e6f2ec;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principle-icon img {
+  max-width: 35px;
+}
+
+.principle h3 {
+  color: #2e6e41;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Utrustningslistor */
+.packing-lists {
+  padding: 4rem 5%;
+}
+
+.packing-lists h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #2e6e41;
+  position: relative;
+}
+
+.packing-lists h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #2e6e41;
+  margin: 0.8rem auto 0;
+}
+
+.packing-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #f2f8f4;
+  border: 2px solid #2e6e41;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #2e6e41;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #e6f2ec;
+}
+
+.tab-button.active {
+  background-color: #2e6e41;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #2e6e41;
+  margin-bottom: 2rem;
+}
+
+.packing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.packing-category {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.packing-category h4 {
+  color: #2e6e41;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e6f2ec;
+}
+
+.packing-category ul {
+  padding-left: 1.2rem;
+}
+
+.packing-category li {
+  margin-bottom: 0.5rem;
+}
+
+/* Utrustnings tips */
+.equipment-tips {
+  background-color: #f2f8f4;
+  padding: 4rem 5%;
+}
+
+.equipment-tips h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #2e6e41;
+  position: relative;
+}
+
+.equipment-tips h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #2e6e41;
+  margin: 0.8rem auto 0;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipment-tip {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.equipment-tip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.equipment-tip img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.equipment-tip h3 {
+  color: #2e6e41;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Rekommenderade butiker */
+.partner-stores {
+  padding: 4rem 5%;
+}
+
+.partner-stores h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2e6e41;
+  position: relative;
+}
+
+.partner-stores h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #2e6e41;
+  margin: 0.8rem auto 0;
+}
+
+.partner-stores > p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.store-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.store-card h3 {
+  color: #2e6e41;
+  font-size: 1.4rem;
+  margin: 1.5rem 1.5rem 0.8rem;
+}
+
+.store-card p {
+  margin: 0 1.5rem 1.2rem;
+}
+
+.store-card .btn-secondary {
+  margin: 0 1.5rem 1.5rem;
+  display: inline-block;
+}
+
+/* Responsiv design för utrustningssidan */
+@media screen and (max-width: 768px) {
   .equipment-hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
   }
   
-  /* Introduktion */
-  .equipment-intro {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .equipment-intro h2 {
-    margin-bottom: 20px;
-    color: var(--heading-color);
-  }
-  
-  .equipment-intro p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-  }
-  
-  /* Principer för utrustning */
-  .equipment-principles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .principle {
-    flex: 1 1 200px;
-    background-color: var(--light-bg);
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform var(--transition-speed) ease;
-  }
-  
-  .principle:hover {
-    transform: translateY(-5px);
-  }
-  
-  .principle-icon img {
-    max-width: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .principle h3 {
-    margin-bottom: 10px;
-    color: var(--heading-color);
-  }
-  
-  /* Packlistor med fliksystem */
-  .packing-lists {
-    padding: 40px 20px;
-  }
-  
-  .packing-lists h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--heading-color);
+  .equipment-hero p {
+    font-size: 1.1rem;
   }
   
   .packing-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
   }
   
   .tab-button {
-    background-color: #e0e0e0;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .equipment-hero {
+    min-height: 250px;
   }
   
-  .tab-button.active,
-  .tab-button:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    transform: scale(1.05);
+  .equipment-hero h1 {
+    font-size: 1.8rem;
   }
   
-  .tab-content {
-    display: none;
-    animation: fadeIn 0.5s ease;
-  }
-  
-  .tab-content.active {
-    display: block;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  .principle, .equipment-tip, .packing-category {
+    padding: 1.5rem;
   }
   
   .packing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 1rem;
   }
-  
-  .packing-category h4 {
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-  }
-  
-  .packing-category ul {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .packing-category ul li {
-    margin-bottom: 5px;
-  }
-  
-  /* Tips för hållbar utrustning */
-  .equipment-tips {
-    padding: 40px 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-  }
-  
-  .equipment-tips h2 {
-    margin-bottom: 20px;
-    color: var(--heading-color);
-  }
-  
-  .tips-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .equipment-tip {
-    flex: 1 1 200px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform var(--transition-speed);
-  }
-  
-  .equipment-tip:hover {
-    transform: translateY(-5px);
-  }
-  
-  .equipment-tip img {
-    max-width: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .equipment-tip h3 {
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-  }
-  
-  /* Butiksrekommendationer */
-  .partner-stores {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .partner-stores h2 {
-    margin-bottom: 20px;
-    color: var(--heading-color);
-  }
-  
-  .store-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .store-card {
-    background-color: var(--light-bg);
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-    transition: transform var(--transition-speed);
-  }
-  
-  .store-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .store-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .store-card h3 {
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-  }
-  
-  .store-card p {
-    margin-bottom: 10px;
-    color: var(--text-color);
-  }
-  
-  .store-card a.btn-secondary {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color var(--transition-speed);
-  }
-  
-  .store-card a.btn-secondary:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  /* Responsiva justeringar */
-  @media (max-width: 768px) {
-    .equipment-principles,
-    .tips-container,
-    .store-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}
