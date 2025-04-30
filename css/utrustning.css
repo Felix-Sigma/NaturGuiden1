@@ -3,7 +3,7 @@
 /* Utrustning hero */
 .equipment-hero {
   height: 40vh;
-  min-height: 300px;
+  min-height: 250px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/equipment-hero.jpg');
   background-size: cover;
   background-position: center;
@@ -20,20 +20,20 @@
 }
 
 .equipment-hero h1 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .equipment-hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* Utrustning introduktion */
 .equipment-intro {
-  padding: 4rem 5%;
+  padding: 3rem 5%;
   background-color: #f2f8f4;
 }
 
@@ -45,7 +45,7 @@
 .intro-content h2 {
   color: #2e6e41;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -63,19 +63,19 @@
   text-align: center;
   max-width: 900px;
   margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .equipment-principles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .principle {
   background-color: #fff;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -109,13 +109,13 @@
 
 /* Utrustningslistor */
 .packing-lists {
-  padding: 4rem 5%;
+  padding: 3rem 5%;
 }
 
 .packing-lists h2 {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
   color: #2e6e41;
   position: relative;
 }
@@ -131,8 +131,8 @@
 
 .packing-tabs {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
   gap: 1rem;
 }
@@ -146,6 +146,9 @@
   color: #2e6e41;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
 }
 
 .tab-button:hover {
@@ -169,15 +172,15 @@
 
 .tab-content h3 {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #2e6e41;
   margin-bottom: 2rem;
 }
 
 .packing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .packing-category {
@@ -206,13 +209,13 @@
 /* Utrustnings tips */
 .equipment-tips {
   background-color: #f2f8f4;
-  padding: 4rem 5%;
+  padding: 3rem 5%;
 }
 
 .equipment-tips h2 {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
   color: #2e6e41;
   position: relative;
 }
@@ -228,8 +231,8 @@
 
 .tips-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -237,7 +240,7 @@
 .equipment-tip {
   background-color: #fff;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -261,12 +264,12 @@
 
 /* Rekommenderade butiker */
 .partner-stores {
-  padding: 4rem 5%;
+  padding: 3rem 5%;
 }
 
 .partner-stores h2 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #2e6e41;
   position: relative;
@@ -284,13 +287,13 @@
 .partner-stores > p {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2rem;
 }
 
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -329,42 +332,74 @@
   display: inline-block;
 }
 
-/* Responsiv design för utrustningssidan */
-@media screen and (max-width: 768px) {
-  .equipment-hero h1 {
-    font-size: 2.2rem;
-  }
-  
-  .equipment-hero p {
-    font-size: 1.1rem;
-  }
-  
-  .packing-tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .tab-button {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
+/* Responsiv design för utrustningssidan - Mobile First */
+@media screen and (min-width: 481px) {
   .equipment-hero {
-    min-height: 250px;
-  }
-  
-  .equipment-hero h1 {
-    font-size: 1.8rem;
+    min-height: 300px;
   }
   
   .principle, .equipment-tip, .packing-category {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   
   .packing-grid {
-    gap: 1rem;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .tips-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .store-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .equipment-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .equipment-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .equipment-intro {
+    padding: 4rem 5%;
+  }
+  
+  .intro-content h2, .packing-lists h2, .equipment-tips h2, .partner-stores h2 {
+    font-size: 2.2rem;
+  }
+  
+  .equipment-principles {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .packing-tabs {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    width: auto;
+    max-width: none;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .packing-lists, .equipment-tips, .partner-stores {
+    padding: 4rem 5%;
+  }
+  
+  .store-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
